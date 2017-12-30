@@ -1,0 +1,7 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}" />
+
+<p>Hello World!!, this is top page.</p>
+
+<li><a href="{% url 'polls:detail' 1 %}">sample</a></li>
