@@ -10,9 +10,9 @@
 <script src="{% static 'uikit.min.js' %}"></script>
 <script src="{% static 'uikit-icons.min.js' %}"></script>
 
-<div class="uk-container">
+<div class="uk-container uk-container-small">
   <div class="uk-card uk-card-default">
-      <div class="uk-card-header">
+      <div id="top" class="uk-card-header">
           <div class="uk-grid-small uk-flex-middle" uk-grid>
               <div class="uk-card uk-card-default uk-card-body">
                 <ul class="uk-nav-default uk-nav-center uk-nav-parent-icon" uk-nav>
@@ -49,10 +49,15 @@
           <h3>...</h3>
           <hr class="uk-divider-icon">
           <h2 id="about" class="body-title">About</h2>
-
+          <article class="uk-article">
+              <p class="uk-text-lead">Me</p>
+              <li>京都大学, 修士, Bioinformatics</li>
+              <p class="uk-text-lead">Likes</p>
+              <li>Python, D言語, 統計学, ゲノム解析, Boxing</li>
+          </article>
       </div>
       <div class="uk-card-footer">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          <a href="#top" class="uk-icon-button uk-margin-small-right" uk-icon="icon: chevron-up" uk-scroll></a>
       </div>
   </div>
 </div>
