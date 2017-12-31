@@ -10,8 +10,9 @@
 <script src="{% static 'uikit.min.js' %}"></script>
 <script src="{% static 'uikit-icons.min.js' %}"></script>
 
-<div class="uk-container uk-width-auto uk-width-xxlarge@s">
-      <div id="top">
+<div class="uk-container uk-width-expand uk-width-xxlarge@s">
+  <div class="uk-card uk-card-default">
+      <div id="top" class="uk-card-header">
           <div class="uk-grid-small uk-flex-middle uk-width-auto" uk-grid>
               <div class="uk-card uk-card-default uk-card-body uk-width-1-4">
                 <ul class="uk-nav-default uk-nav-center uk-nav-parent-icon" uk-nav>
@@ -52,8 +53,7 @@
               </div> -->
           </div>
       </div>
-      <hr class="uk-divider-icon">
-      <div>
+      <div class="uk-card-body">
           <h2 id="work" class="body-title">Work</h2>
           <ul class="uk-list uk-list-bullet">
               <li><a href="">RiceNetST</a></li>
@@ -73,8 +73,8 @@
               <li>Python, D言語, 統計学, ゲノム解析, Boxing</li>
           </article>
       </div>
-      <hr class="uk-divider-icon">
-      <div>
+      <div class="uk-card-footer">
           <a href="#top" class="uk-icon-button uk-margin-small-right" uk-icon="icon: chevron-up" uk-scroll></a>
       </div>
+  </div>
 </div>
