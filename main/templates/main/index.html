@@ -14,14 +14,31 @@
   <div class="uk-card uk-card-default">
       <div id="top" class="uk-card-header">
           <div class="uk-grid-small uk-flex-middle uk-width-auto" uk-grid>
-              <div class="uk-card uk-card-default uk-card-body">
+              <div class="uk-card uk-card-default uk-card-body uk-width-1-4">
                 <ul class="uk-nav-default uk-nav-center uk-nav-parent-icon" uk-nav>
                     <li><a href="#work" uk-scroll>Work</a></li>
                     <li><a href="#publish" uk-scroll>Publish</a></li>
                     <li><a href="#about" uk-scroll>About</a></li>
                 </ul>
               </div>
-              <div class="uk-width-1-6">
+              <div class="uk-width-3-4">
+                <div class="uk-grid uk-grid-collapse">
+                    <div class="uk-width-1-5">
+                        <img class="uk-border-circle" src="{% static 'main/images/mychara.png'%}">
+                    </div>
+                    <div class="uk-width-4-5">
+                        <p class="uk-card-title uk-margin-remove-bottom">Toshiyuki Sakai</p>
+                        <h3 class="uk-text-meta uk-margin-remove-top">よく使うIDはslt666666です。</h3>
+                    </div>
+                </div>
+                <div class="icon_links uk-margin-top">
+                    <a href="" class="uk-icon uk-margin-small-right" uk-icon="icon: github">GitHub</a>
+                    <a href="" class="uk-icon uk-margin-small-right" uk-icon="icon: twitter">Twitter</a>
+                    <a href="" class="uk-icon uk-margin-small-right" uk-icon="icon: pencil">Hatena</a>
+                    <a href="" class="uk-icon" uk-icon="icon: file-edit">Qiita</a>
+                </div>
+              </div>
+              <!-- <div class="uk-width-1-6">
                   <img class="uk-border-circle" src="{% static 'main/images/mychara.png'%}">
               </div>
               <div class="uk-width-expand">
@@ -33,7 +50,7 @@
                       <a href="" class="uk-icon uk-margin-small-right" uk-icon="icon: pencil">Hatena</a>
                       <a href="" class="uk-icon" uk-icon="icon: file-edit">Qiita</a>
                   </div>
-              </div>
+              </div> -->
           </div>
       </div>
       <div class="uk-card-body">
