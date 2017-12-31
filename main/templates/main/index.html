@@ -1,7 +1,58 @@
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}" />
+<link rel="stylesheet" href="{% static 'uikit.min.css' %}" />
 
-<p>Hello World!!, this is top page.</p>
+<!-- jQuery is required -->
+<script src="{% static 'jquery-3.2.1.slim.min.js' %}"></script>
 
-<li><a href="{% url 'polls:detail' 1 %}">sample</a></li>
+<!-- UIkit JS -->
+<script src="{% static 'uikit.min.js' %}"></script>
+<script src="{% static 'uikit-icons.min.js' %}"></script>
+
+<div class="uk-container">
+  <div class="uk-card uk-card-default">
+      <div class="uk-card-header">
+          <div class="uk-grid-small uk-flex-middle" uk-grid>
+              <div class="uk-card uk-card-default uk-card-body">
+                <ul class="uk-nav-default uk-nav-center uk-nav-parent-icon" uk-nav>
+                    <li><a href="#work" uk-scroll>Work</a></li>
+                    <li><a href="#publish" uk-scroll>Publish</a></li>
+                    <li><a href="#about" uk-scroll>About</a></li>
+                </ul>
+              </div>
+              <div class="uk-width-1-6">
+                  <img class="uk-border-circle" src="{% static 'main/images/mychara.png'%}">
+              </div>
+              <div class="uk-width-expand">
+                  <p class="uk-card-title uk-margin-remove-bottom">Toshiyuki Sakai</p>
+                  <h3 class="uk-text-meta uk-margin-remove-top">よく使うIDはslt666666です。</h3>
+                  <div class="icon_links">
+                      <a href="" class="uk-icon uk-margin-small-right" uk-icon="icon: github">GitHub</a>
+                      <a href="" class="uk-icon uk-margin-small-right" uk-icon="icon: twitter">Twitter</a>
+                      <a href="" class="uk-icon uk-margin-small-right" uk-icon="icon: pencil">Hatena</a>
+                      <a href="" class="uk-icon" uk-icon="icon: file-edit">Qiita</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="uk-card-body">
+          <h2 id="work" class="body-title">Work</h2>
+          <ul class="uk-list uk-list-bullet">
+              <li><a href="{% url 'polls:detail' 1 %}">RiceNetST</a></li>
+              イネの遺伝子ネットワーク調査サイト
+              <li>Step_Lasso_RILs</li>
+              RIL集団用のepistasis解析プログラム(※調整中)
+          </ul>
+          <hr class="uk-divider-icon">
+          <h2 id="publish" class="body-title">Publish</h2>
+          <h3>...</h3>
+          <hr class="uk-divider-icon">
+          <h2 id="about" class="body-title">About</h2>
+
+      </div>
+      <div class="uk-card-footer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      </div>
+  </div>
+</div>
