@@ -4,7 +4,6 @@
 }
 p {
   font-family: SAO;
-  font-size: medium;
 }
 .body-title {
   color: orange;
@@ -12,16 +11,4 @@ p {
 }
 .uk-icon-image {
     background-image: url("images/hatenablog-logo.png");
-}
-a {
-  font-size: medium;
-}
-h3 {
-  font-size: medium;
-}
-h2 {
-  font-size: large;
-}
-li {
-  font-size: medium;
 }
