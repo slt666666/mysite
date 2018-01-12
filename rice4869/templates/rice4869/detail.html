@@ -1,0 +1,12 @@
+<h1>{{ gene_data.gene_id }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'rice4869:network' gene_data.gene_id %}" method="post">
+{% csrf_token %}
+{% for each_gene in gene_list %}
+    <input type="radio" name="second_gene" id="each_gene{{ forloop.counter }}" value="{{ each_gene.gene_id }}" />
+    <label for="each_gene{{ forloop.counter }}">{{ each_gene.gene_id }}</label><br />
+{% endfor %}
+<input type="submit" value="check" />
+</form>

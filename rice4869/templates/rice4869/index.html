@@ -1,1 +1,9 @@
-rice4869 apps
+{% if gene_list %}
+    <ul>
+    {% for gene in gene_list %}
+        <li><a href="{% url 'rice4869:detail' gene.gene_id %}">{{ gene.gene_id }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
