@@ -1,9 +1,29 @@
+<head>
+{% load static %}
+<!-- jQuery is required -->
+<script src="{% static 'jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'rice4869/main.js' %}"></script>
+
+</head>
+
 {% if gene_list %}
-    <ul>
+    <!-- <ul>
     {% for gene in gene_list %}
         <li><a href="{% url 'rice4869:detail' gene.gene_id %}">{{ gene.gene_id }}</a></li>
     {% endfor %}
-    </ul>
+    </ul> -->
+<h1>ajax test</h1>
+<form id="gene_select_fm" action="{% url 'rice4869:view_detail'%}" method="post">{% csrf_token %}
+    <select id="select_gene" name="select_gene">
+    <option value="">遺伝子の選択肢</option>
+    {% for gene in gene_list %}
+    <option value="{{ gene.gene_id }}">{{ gene.gene_id }}</option>
+    {% endfor %}
+    </select>
+    <button id="gene_select_btn" type="submit">send</button>
+</form>
+<div id="result">
+</div>
 {% else %}
-    <p>No polls are available.</p>
+    <p>No genes are available.</p>
 {% endif %}
