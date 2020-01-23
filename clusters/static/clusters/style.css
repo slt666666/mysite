@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'SAO';
+  src: url("font/SAO.otf");
+}
+p {
+  font-family: SAO;
+}
+.body-title {
+  color: orange;
+  font-family: SAO;
+}
+.uk-icon-image {
+    background-image: url("images/hatenablog-logo.png");
+}

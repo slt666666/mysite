@@ -1,25 +1,46 @@
-<head>
 {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}" />
+<link rel="stylesheet" href="{% static 'uikit.min.css' %}" />
+
 <!-- jQuery is required -->
 <script src="{% static 'jquery-3.2.1.min.js' %}"></script>
-<script src="{% static 'clusters/main.js' %}"></script>
 
-</head>
+<!-- UIkit JS -->
+<script src="{% static 'uikit.min.js' %}"></script>
+<script src="{% static 'uikit-icons.min.js' %}"></script>
 
-{% if specie_list %}
-
-<h1>ajax test</h1>
-<form id="specie_select_fm" action="{% url 'clusters:detail'%}" method="get">{% csrf_token %}
-    <select id="select_specie" name="select_specie">
-    <option value="">Select Specie</option>
-    {% for specie in specie_list %}
-    <option value="{{ specie }}">{{ specie }}</option>
-    {% endfor %}
-    </select>
-    <button id="specie_select_btn" type="submit">send</button>
-</form>
-<div id="result">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NLR Clusters</title>
+<link rel="shortcut icon" href="{% static 'main/images/favicon.ico'%}">
+<link rel="icon" href="{% static 'main/images/favicon.ico'%}">
+<div class="uk-container uk-width-auto uk-width-xxlarge@s">
+  <div class="uk-card uk-card-default">
+      <div id="top" class="uk-card-header">
+          <div class="uk-grid-small uk-flex-middle uk-width-auto" uk-grid>
+              <div class="uk-width-3-4@s">
+                <div>
+                    <img class="uk-align-left uk-margin-remove-bottom" src="{% static 'main/images/mychara.png'%}" width="64" height="64">
+                    <p class="uk-card-title uk-margin-remove-bottom">Toshiyuki Sakai</p>
+                    <h3 class="uk-text-meta uk-margin-remove-top">ID:slt666666</h3>
+                </div>
+                <div class="icon_links">
+                    <a href="https://github.com/slt666666" class="uk-icon uk-margin-small-right" uk-icon="icon: github">GitHub</a>
+                    <!-- <a href="http://slt666666.hatenablog.com/" class="uk-icon uk-margin-small-right" uk-icon="icon: pencil">Hatena</a> -->
+                    <a href="https://twitter.com/slt666666" class="uk-icon uk-margin-small-right" uk-icon="icon: twitter">Twitter</a>
+                    <a href="https://qiita.com/slt666666" class="uk-icon" uk-icon="icon: file-edit">Qiita</a>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="uk-card-body">
+          {% if specie_list %}
+          {% for specie in specie_list %}
+          <h3 id="{{ specie }}" class="body-title">{{ specie }}</h3>
+          {% endfor %}
+      </div>
+      <div class="uk-card-footer">
+          <a href="#top" class="uk-icon-button uk-margin-small-right" uk-icon="icon: chevron-up" uk-scroll></a>
+      </div>
+  </div>
 </div>
-{% else %}
-    <p>No species are available.</p>
-{% endif %}
