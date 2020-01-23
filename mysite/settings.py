@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'main.apps.MainConfig',
     'rice4869.apps.Rice4869Config',
+    'clusters',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
