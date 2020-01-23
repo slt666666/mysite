@@ -7,4 +7,4 @@ def index(request):
     return render(request, 'clusters/index.html', context)
 
 def cluster(request, specie):
-    return render(request, 'clusters/Tomato_v3_2_cluster.html')
+    return render(request, 'clusters/{}_cluster.html'.format(specie))
