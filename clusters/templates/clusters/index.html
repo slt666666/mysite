@@ -12,7 +12,7 @@
     <select id="select_specie" name="select_specie">
     <option value="">Select specie</option>
     {% for specie in specie_list %}
-    <option value="{{ specie }}">{{ specie }}</option>
+    <option value="{{ specie.specie_name }}">{{ specie.specie_name }}</option>
     {% endfor %}
     </select>
     <button id="specie_select_btn" type="submit">send</button>

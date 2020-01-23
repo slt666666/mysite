@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    specie_list = ["Tomato_v3_2", "Tomato_v2_4"]
+    specie_list = {"specie_name": "Tomato_v3_2", "specie_name": "Tomato_v2_4"}
     return render(request, 'clusters/index.html', specie_list)
 
 # def detail(request, specie_name):
