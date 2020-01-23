@@ -1,1 +1,25 @@
-hello index!
+<head>
+{% load static %}
+<!-- jQuery is required -->
+<script src="{% static 'jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'clusters/main.js' %}"></script>
+
+</head>
+
+{% if gene_list %}
+
+<h1>ajax test</h1>
+<form id="specie_select_fm" action="{% url 'clusters:view_detail'%}" method="post">{% csrf_token %}
+    <select id="select_specie" name="select_specie">
+    <option value="">Select Specie</option>
+    {% for gene in gene_list %}
+    <option value="{{ specie.specie_name }}">{{ specie.specie_name }}</option>
+    {% endfor %}
+    </select>
+    <button id="specie_select_btn" type="submit">send</button>
+</form>
+<div id="result">
+</div>
+{% else %}
+    <p>No genes are available.</p>
+{% endif %}
