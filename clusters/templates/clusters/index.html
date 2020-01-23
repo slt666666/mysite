@@ -38,6 +38,9 @@
           {% for specie in specie_list %}
           <h3 id="{{ specie }}" class="body-title">{{ specie }}</h3>
           {% endfor %}
+          {% else %}
+              <p>No specie are available.</p>
+          {% endif %}
       </div>
       <div class="uk-card-footer">
           <a href="#top" class="uk-icon-button uk-margin-small-right" uk-icon="icon: chevron-up" uk-scroll></a>
