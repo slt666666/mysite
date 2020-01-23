@@ -6,14 +6,14 @@
 
 </head>
 
-{% if gene_list %}
+{% if specie_list %}
 
 <h1>ajax test</h1>
 <form id="specie_select_fm" action="{% url 'clusters:view_detail'%}" method="post">{% csrf_token %}
     <select id="select_specie" name="select_specie">
     <option value="">Select Specie</option>
-    {% for gene in gene_list %}
-    <option value="{{ specie.specie_name }}">{{ specie.specie_name }}</option>
+    {% for specie in specie_list %}
+    <option value="{{ specie }}">{{ specie }}</option>
     {% endfor %}
     </select>
     <button id="specie_select_btn" type="submit">send</button>
