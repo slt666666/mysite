@@ -1,24 +1,6 @@
-<head>
-{% load static %}
-<!-- jQuery is required -->
-<script src="{% static 'jquery-3.2.1.min.js' %}"></script>
-<script src="{% static 'clusters/main.js' %}"></script>
-
-</head>
-
-{% if specie_list %}
-<h1>ajax test</h1>
-<form id="specie_select_fm" action="{% url 'clusters:detail'%}" method="post">{% csrf_token %}
-    <select id="select_specie" name="select_specie">
-    <option value="">Select specie</option>
-    {% for specie in specie_list %}
-    <option value="{{ specie.specie_name }}">{{ specie.specie_name }}</option>
-    {% endfor %}
-    </select>
-    <button id="specie_select_btn" type="submit">send</button>
-</form>
-<div id="result">
-</div>
-{% else %}
-    <p>No species are available.</p>
-{% endif %}
+<html>
+<body>
+    <p>Hi there!</p>
+    <p>It works!</p>
+</body>
+</html>
