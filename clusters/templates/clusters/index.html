@@ -35,8 +35,10 @@
       </div>
       <div class="uk-card-body">
           {% if specie_list %}
+          <p>Right-Click -> Save Link As ... </p>
+          <h4>(You can directly access to each link, but it takes long time...)</h4>
           {% for specie in specie_list %}
-          <a href="{{ specie }}" id="{{ specie }}" class="body-title">*{{ specie }}</a><br>
+          <a href="{{ specie }}" id="{{ specie }}" class="body-title">{{ specie }}</a><br>
           {% endfor %}
           {% else %}
               <p>No specie are available.</p>
